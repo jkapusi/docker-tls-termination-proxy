@@ -21,8 +21,8 @@ echo "Resolving placeholders in configuration file: $config"
 
 perl -p -i -e 's/\$\{([^}]+)\}/defined $ENV{$1} ? $ENV{$1} : $&/eg' $config
 
-echo "Resulting configuration:"
-cat $config
+echo "Resulting configuration: (line numbers prepended)"
+awk '{printf "%d\t | %s\n", NR, $0}' < $config
 
 # Start pound
 exec /usr/sbin/pound \
