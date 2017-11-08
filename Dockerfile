@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:17.10
 MAINTAINER Matthias Nüßler <m.nuessler@web.de>
 
 LABEL Description="A TLS termination proxy using pound"
