@@ -12,6 +12,7 @@ fi
 # Environmenat variables and defaults for the configuration
 export HTTPS_UPSTREAM_SERVER_ADDRESS=${HTTPS_UPSTREAM_SERVER_ADDRESS:-"upstream"}
 export HTTPS_UPSTREAM_SERVER_PORT=${HTTPS_UPSTREAM_SERVER_PORT:-80}
+export CIPHERS=${CIPHERS:-"ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:!aNULL:!MD5:!DSS:!3DES:!RSA"}
 
 # Prepare configuration file
 config=/etc/pound/pound.cfg
